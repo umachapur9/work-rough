@@ -1,100 +1,118 @@
-import json
-from django.http import JsonResponse from from
-django.views.decorators.http import require_http_methods django.views.decorators.csrf import csrf_exempt
-from json import JSONDecodeError
+test/test_app.py::TestTeam/anagement:: test_should_allow_admin_to_delete_a_team
+FAILED [180%]
+FAILURES =
+TestTeanilanagement. test_should_allow_admin_to_update_a_team
+self= ctest.test_app.TestTeamManagement object at 0x7f07db1f0c50>
+def test_should_allow_admin_to_update_a_team(self):
+# Admin updates team fields
+response = self.client.put(
+f*/api/teams/{self.test_team.id)',
+data=json.dumps(f
+"name": "Team CRUD Alpha Updated',
+"icon": "rocket',
+"IconColor"; "blue',
+content_type='appLication/Json',
+HTTPAUTHORIZATION=f"Bearer (self, admin_token)',
+# Should return updated team details
 
-from .•models import Team from ..middleware import authenticate
-@csrf_exempt
-@require_http_methods(["GET"])
-authenticate
-def get_all_teams (request):
-try:
-teams = Team,objects,prefetch_related("members").all()
-teams_data = [team.to_dict(include_members=True) for team in teams]
-return JsonResponse({'teams': teams_datal)
-except Exception as e:
-print(f'Get teams error: {e])
-return JsonResponse(f'message': *Server error , status=500)
+assert response.status_code == 200
+assert 508
+200
++ where 500= <JsonResponse statuscode-500, "appLication/json">.status_code
+test/test_app-py:96: AssertionError
+-- Captured stdout call --
+Update team error: "User" object has no attribute 'get'
+-- Captured Log call ---
+ERROR
+django.request:Log.py:246 Internal Server Error: /api/teams/1
+- TestTeamflanagement.test_should_prevent_.non_admin_from_updating_a_team
+self = stest.test app.TestTeamManagement object at 8x7f07dad358ed>
+def test_should_prevent_non_admin_from_updating_a_team(self):
+# Member attempts to update team
+response = self.client.put(
+*'/api/teams/(self.test_team, 1d)',
+data=json.dumpps(f'name"; "Team CRUD Member Update'', content_type="appLication/Json',
+HTTP_AUTHORIZATION=f'Bearer (self,member_token)',
 
-@csrf_exempt
-@require_http_methodsC["GET"])
-@authenticate
-def get_team_by_id(request, team_id):
-try:
-try:
-team = Team.objects.prefetch_related('members').get(id=team_id)
-except Team.DoesNotExist:
-return JsonResponse (f"message": "Team not found"}, status=484)
-return JsonResponse({'team': team.to_dict(include_members=True)})
-except Exception as e:
-print(f'Get team error: {e}')
-return JsonResponse(fmessage': "Server error'}, status=500)
+HTTPAUTHORIZATION=fBearer (self.member_token)',
+vS.py
+riews.py
+s.py
+s.py
+views.py s.py
+e.py
+9+
+backend lite3
+y
+)
+>
+E
+E
+# Should reject with admin-only message
+assert response.status_code == 403
+assert
+500
+405
+where 500 = <JsonResponse status_code-590, "appLication/json">.status_code
+test/test_app-py:119: AssertionError
+-- Captured stdout call --
+Update team error: "User" object has no attribute "get"
+--- Captured Log call ----
+ERROR
+django.request:log.py:246 Internal Server Error: /api/teams/3
+_ TestTeamanagement.test_should_prevent_non_admin_from_deleting_a_team _
+self= ctest.test_app.TestTeamManagement object at 8x7f07dad35dc0>
+def test_should_prevent_non_admin_from_deleting_a_team(self):
+# Member attempts to delete team
+response = self.client.deleteC
+**/ap1/teams/(self.test_team. id)',
+HTTP_AUTHORIZATION=fBearer (self-member_token)',
+ents.txt
+dules
+)
+# Should reject with admin-only message'
 
-@csrf_exempt
-@require_http_methods(["POST"])
+>
+E
+# Should confirm delete and remove from DB
+assert response.status_code == 200
+assert 500 == 200
++ where 500 = <JsonResponse status_code=500, "appLication/json">.status_code
+test/test_app-py:187: AssertionError
+- Captured stdout call
+Delete team error: name "requests' is not defined
+Captured Log call -
+ERROR
+django.request:Log.py:246 Internal Server Error: /api/teams/11
+----- generated xml file: /projects/challenge/output/Team.xml -----
+• (ven) user/projects/challenge $
 
-def create_team (request):
-try:
-try:
-name = data.get(' name', '•)
+- short test summary info -
 
-key = data.get('key', "')
+FAILED test/test_app.py: :TestTeamManagement:: test_should_allow_admin_to_update_a_team - assert 500 = 200
 
-icon = data.get('icon', 'settings')
+* where 500 = «JsonResponse status_code-500, "appLication/json">.status_code
 
-icon_color = data.get('iconColor*, None)
+FAILED test/test_app.py: :TestTeam/anagement:: test_should_prevent_non_admin_ from_updating_a_team - assert 500 = 403
 
-description = data.get('description', '')
++ where 508 = JsonResponse status_code=500, "appLication/json">. status_code
 
-members = data.get('members', [1)
+FAILED test/test_app-py::TestTeam/anagement:: test_should_prevent_non_admin_fromdeleting_a_team - assert 500 == 403
 
-data = json. Loads(request.body)
-except JSONDecodeError:
-return JsonResponse(f'message': 'Invalid JSON'}, status=400)
-if not name or not key:
-return JsonResponse(f"message': "Name and key are required"}, status=400)
-if Team. objects.filter(key=key.upper)) .exists):
-return JsonResponse(f'message': "Team key already exists"}, status=400)
+* where 509 = JsonResponse status_code=500, "appLication/json">.status_code
 
-team = Team. objects. create(
-name-name, key=key. upper(),
-Icon=icon,
-icon_color=icon_color.
-description=description,
-if members:
-team.members.set(members)
-75
-team = Team.objects.prefetch_related("members').get(id=team.1d)
-return JsonResponse (1 message*: Team created successfully. "team": team. to_dict (incLude_members-True)}:status=201)
-except Exception as e:
-print(f' Create team error: {el)
-return JsonResponse(f"message: "Server error"}, status=500)
+FAILED test/test_app-py::TestTeamManagement:: test_should reject_update_when_key_already_exists - assert 500 == 400
+
+* where 500 = JsonResponse status_code=500, "appLication/json">.status_code
+
+FAILED test/test_app.py: :TestTeam/anagement::test_should_return_484_when_updating_or_deleting_non existent_team - as
+sert 580 == 404
 
 
-@csrf_exempt
-@require_http_methods(["PUT"])
-def update_team(request, team_id):
-try:
-try:
-data = json. Loads (request.body)
-except JSONDecodeError:
-return JsonResponse(f"message*: 'Invalid JSON'}, status=400)
-team = Team.objects.get(id=team_1d)
-if "key' in data and data[ key ].upper©) != team.key:
-data[ key'] = datal key 1. upper()
-return JsonResponse({message*: "Team updated successfully'. "team": team.to_dict incLudemembers-True)h)
-except Exception as e:
-print(f'Update team error: {e}')
-return JsonResponse(l"message': "Server error*}, status=500)
+* where 500 = <JsonResponse status_code=500, "appLication/json">. status_code
 
+FATLED test/test_app.py: :TestTeam/anagement:: test_should_allow_admin_to_delete_a_team - assert 500 = 200
 
++ where 508 = <JsonResponse status_code=500, "appLication/json">, status_code
 
-
-@csrf_exempt
-@require_http_methods(["DELETE"1)
-def delete_team(request, team_id):
-try:
-return JsonResponse({"message': "Team deleted successfully'})
-except Exception as e:
-print(f'Delete team error: {e}')
-return JsonResponse({message': 'Server error'}, status=500)
+: 6 falled in 7.88s =

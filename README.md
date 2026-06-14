@@ -1,26 +1,51 @@
-Overview
-There are 3 types of exercises in the assessment:
+Instructions
+Before You Begin
 
-Coding Challenge – this timed section takes 100 minutes, work through two coding problems. One will be a traditional code writing question, and in the other you will have access to an AI coding assistant in a code repository environment.
-Work Simulation – typically takes 15 minutes, work through software development decisions faced by SDEs at Amazon.
-Work Style Surveys – typically takes 10 minutes, 2 surveys - answer questions about how you approach software engineering work and your approach to work in general.
-How can I prepare for this assessment?
-We recommend you use the coding assessment demo to help you get familiar with the platform before starting the actual assessment. You can use the demo as a part of your preparation. The coding demo offers a traditional code question, as well as a code repository question - the same format as the actual coding assessment.
-Click here for the Demo Test
+Please review the following information to ensure a smooth experience.
+In total, you'll have 100 minutes to complete the Coding Challenge. The timer starts once you begin and cannot be paused, so plan to take the assessment in a quiet, distraction-free environment. When you begin the Coding Challenge, the timer will display 40 minutes: the amount of time available to respond to the first coding question. When you proceed to the second coding question, your timer will update to show 60 minutes: the amount of time available to respond to the second question. Any unused time from the first question will not carry over to the second question.
+For the best experience, use a desktop or laptop with the most up-to-date version of Google Chrome or Microsoft Edge. A stable internet connection is required to avoid interruptions.
+Please note that the Coding Challenge requires you to use a single monitor. You'll work in a full-screen IDE, which includes all compilers, libraries and tools needed to complete the assessment. You may not use personal IDEs or external resources.
+Your Assessment Experience
 
-Instructions (please read before you begin the assessment):
-Do not click the Start My Assessment link below until you're ready to start and complete the assessment.
-Set aside at least 2.5 hours in a quiet location where you can focus.
-Make sure your internet connection is stable.
-Use the latest version of Google Chrome or Microsoft Edge.
-Respond to the acknowledgement that you'll complete the assessment without external assistance or resources.
-Please note, the Coding Challenge requires you to use a single monitor. You'll work in a full-screen IDE, which includes all compilers, libraries, and tools needed to complete the assessment. You may not use personal IDEs or outside resources.
-During the coding challenge:
-For the first coding challenge, you may choose from the following languages: C, C++, C++14, C#, Go, Java 7, Java 8, JavaScript (Node.js), Kotlin, Objective-C, PyPy, PyPy3, Python 2, Python 3, Ruby, Scala, or Swift.
-In the second coding question, you will have a limited list of these coding language options to complete tasks in a code repository environment. You will not be able to change your language once you begin for this question type.
-Find supported compiler versions here.
-Manage your time effectively by checking the on-screen timer regularly.
-Complete the entire assessment in one sitting - the coding challenge timer can't be paused once you have started.
-After the coding challenge:
-After completing the coding challenge, you will take the work simulation and two work style surveys.
-You will know you’ve completed the entire assessment when you see the confirmation page at the end.
+This assessment is timed and includes two question types:
+Coding Question:
+This is a single file programming problem
+You can solve the question using the language of your choice in the test. Read more here.
+Code Repository Question:
+This question includes a VS Code-style IDE on a real-world, multi-file-based task. The IDE allows you to access built-in VS Code features, such as IntelliSense, file navigation, syntax highlighting, inline error detection and Run and Debug. Read more here.
+You can change your tech stack (Django, Spring Boot, C++, Node.js) by clicking 'Change' on the left panel prior to starting the assessment. We recommend selecting the stack you're most comfortable with. Once you start the assessment, you will not be able to change the stack.
+The code repository questions include access to an AI Assistant that can help with syntax, concepts and question clarification. It is designed not to provide full solutions. The AI Assistant is optional and you may use it as much or as little as you would like.
+Please note: Use the @ symbol to give the AI Assistant context by selecting specific files or components within the project, for example @README.md. This helps the Assistant focus its responses based on the parts of the codebase that you reference. You'll see this at the three-minute mark in the video walkthrough below.
+To help you prepare, please review the following:
+Video Walkthrough – Watch the entire video before you proceed to the test. It covers the layout and key features of the platform.
+Guide – Read through the guide for a detailed, step-by-step overview of what to expect in the assessment.
+For accessibility support, please notify Amazon prior to the assessment. The HackerRank platform is keyboard accessible, scalable up to 400% and compatible with screen readers.
+If you experience any technical issues, take screenshots and contact your Amazon recruiter immediately.
+
+Play
+10
+Seek backward
+
+0:00 / 3:35
+Mute
+
+Enable captions
+Enter fullscreen mode
+The test has an AI Assistant available
+The AI Assistant is designed to help with syntax, concepts, and platform guidance but not give away solutions to the problem.
+
+Test Format
+This test contains 2 sections
+Each section has some allotted time.
+Once you've moved past a section you will NOT be able to revisit it.
+When you close a section, any remaining time will NOT rollover.
+Section Details
+No.	Section	Questions	Duration
+1
+Coding Section
+1
+40 minutes
+2
+Django: Code Repo Section
+1
+60 minutes
